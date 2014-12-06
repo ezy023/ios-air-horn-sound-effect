@@ -11,11 +11,10 @@
 @interface ViewController ()
 {
     AVAudioPlayer *horn;
-    SystemSoundID airHorn;
     UIButton *playSoundButton;
+    NSURL *airHornURL;
+    NSMutableArray *soundsArray;
 }
-
-@property (nonatomic) SystemSoundID airHorn;
 
 @end
 
@@ -24,20 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    self.view.backgroundColor = [UIColor greenColor];
     
     NSString *airHornWAVPath = [[NSBundle mainBundle] pathForResource:@"convert-test.caf" ofType:nil];
-    NSURL *airHornURL = [NSURL fileURLWithPath:airHornWAVPath];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)airHornURL, &airHorn);
-    
+    airHornURL = [NSURL fileURLWithPath:airHornWAVPath];
+    soundsArray = [[NSMutableArray alloc] init];
+
     [self addButtonToView];
     [self addConstraintsToView];
-}
-
-- (void)dealloc
-{
-    AudioServicesDisposeSystemSoundID(_airHorn);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,18 +40,21 @@
 - (void)addButtonToView
 {
     playSoundButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [playSoundButton setTitle:@"Play Sound" forState:UIControlStateNormal];
+    [playSoundButton setTitle:@"Play Air Horn" forState:UIControlStateNormal];
 
-    [playSoundButton addTarget:self action:@selector(playAirHornSound) forControlEvents:UIControlEventTouchDown];
+    [playSoundButton addTarget:self action:@selector(playAirHornSound:) forControlEvents:UIControlEventTouchDown];
     [playSoundButton addTarget:self action:@selector(revertBackgroundColor) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:playSoundButton];
     playSoundButton.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
-- (void)playAirHornSound
+- (IBAction)playAirHornSound:(id)sender
 {
-    NSLog(@"Play the Air Horn Sound Now");
-    AudioServicesPlaySystemSound(airHorn);
+    AVAudioPlayer *hornSound = [[AVAudioPlayer alloc] initWithContentsOfURL:airHornURL error:nil];
+    [soundsArray addObject:hornSound];
+    [hornSound prepareToPlay];
+    [hornSound play];
+    
     self.view.backgroundColor = [UIColor redColor];
 }
 

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50D01FD41A33B70E0004B31C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D01FD31A33B70E0004B31C /* Images.xcassets */; };
 		50E3CAC61A2666F800DD9CE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E3CAC51A2666F800DD9CE2 /* main.m */; };
 		50E3CAC91A2666F800DD9CE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E3CAC81A2666F800DD9CE2 /* AppDelegate.m */; };
 		50E3CACC1A2666F800DD9CE2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E3CACB1A2666F800DD9CE2 /* ViewController.m */; };
-		50E3CAD11A2666F800DD9CE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E3CAD01A2666F800DD9CE2 /* Images.xcassets */; };
 		50E3CAE01A2666F800DD9CE2 /* AirHornTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E3CADF1A2666F800DD9CE2 /* AirHornTests.m */; };
 		50E3CAEC1A26762B00DD9CE2 /* air-horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 50E3CAEB1A26762B00DD9CE2 /* air-horn.wav */; };
 		50E3CAEE1A28BB3900DD9CE2 /* convert-test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 50E3CAED1A28B9B000DD9CE2 /* convert-test.caf */; };
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50D01FD31A33B70E0004B31C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		50E3CAC01A2666F800DD9CE2 /* AirHorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirHorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E3CAC41A2666F800DD9CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E3CAC51A2666F800DD9CE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		50E3CAC81A2666F800DD9CE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		50E3CACA1A2666F800DD9CE2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		50E3CACB1A2666F800DD9CE2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		50E3CAD01A2666F800DD9CE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		50E3CAD91A2666F800DD9CE2 /* AirHornTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirHornTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E3CADE1A2666F800DD9CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50E3CADF1A2666F800DD9CE2 /* AirHornTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirHornTests.m; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 		50E3CAB71A2666F800DD9CE2 = {
 			isa = PBXGroup;
 			children = (
+				50D01FD31A33B70E0004B31C /* Images.xcassets */,
 				50E3CAC21A2666F800DD9CE2 /* AirHorn */,
 				50E3CADC1A2666F800DD9CE2 /* AirHornTests */,
 				50E3CAC11A2666F800DD9CE2 /* Products */,
@@ -87,7 +88,6 @@
 				50E3CAED1A28B9B000DD9CE2 /* convert-test.caf */,
 				50E3CACA1A2666F800DD9CE2 /* ViewController.h */,
 				50E3CACB1A2666F800DD9CE2 /* ViewController.m */,
-				50E3CAD01A2666F800DD9CE2 /* Images.xcassets */,
 				50E3CAC31A2666F800DD9CE2 /* Supporting Files */,
 			);
 			path = AirHorn;
@@ -200,9 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D01FD41A33B70E0004B31C /* Images.xcassets in Resources */,
 				50E3CAEE1A28BB3900DD9CE2 /* convert-test.caf in Resources */,
 				50E3CAEC1A26762B00DD9CE2 /* air-horn.wav in Resources */,
-				50E3CAD11A2666F800DD9CE2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,12 +325,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AirHorn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -338,12 +340,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AirHorn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -400,6 +404,7 @@
 				50E3CAE51A2666F800DD9CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50E3CAE61A2666F800DD9CE2 /* Build configuration list for PBXNativeTarget "AirHornTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +413,7 @@
 				50E3CAE81A2666F800DD9CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

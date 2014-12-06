@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7EEEADFB-DD2A-42D8-8B76-6643632B0F91</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AirHorn</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7718B7031A4BCB563006737DCA09DE2C29B19CB3</key>
+		<string>github.com:allareri/ios-air-horn-sound-effect.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AirHorn.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7718B7031A4BCB563006737DCA09DE2C29B19CB3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:allareri/ios-air-horn-sound-effect.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7718B7031A4BCB563006737DCA09DE2C29B19CB3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7718B7031A4BCB563006737DCA09DE2C29B19CB3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AirHorn</string>
+		</dict>
+	</array>
+</dict>
+</plist>
