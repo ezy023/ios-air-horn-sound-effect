@@ -41,6 +41,10 @@
 {
     playSoundButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [playSoundButton setTitle:@"Play Air Horn" forState:UIControlStateNormal];
+    [playSoundButton setBackgroundColor:[UIColor clearColor]];
+    float horiz = self.view.frame.size.width / 2;
+    float vert  = self.view.frame.size.height / 2;
+    playSoundButton.contentEdgeInsets = UIEdgeInsetsMake(vert, horiz, vert, horiz);
 
     [playSoundButton addTarget:self action:@selector(playAirHornSound:) forControlEvents:UIControlEventTouchDown];
     [playSoundButton addTarget:self action:@selector(revertBackgroundColor) forControlEvents:UIControlEventTouchUpInside];
