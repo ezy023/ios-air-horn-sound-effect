@@ -27,6 +27,7 @@
     NSString *airHornWAVPath = [[NSBundle mainBundle] pathForResource:@"convert-test.caf" ofType:nil];
     airHornURL = [NSURL fileURLWithPath:airHornWAVPath];
     soundsArray = [[NSMutableArray alloc] init];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:nil];
 
     [self addButtonToView];
     [self addConstraintsToView];
